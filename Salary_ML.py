@@ -96,7 +96,6 @@ def find_optimal_lm_mod(X, y, cutoffs, test_size = .30, random_state=42, plot=Tr
     reduce_X = X.iloc[:, np.where((X.sum() > int(best_cutoff)) == True)[0]]
     num_feats.append(reduce_X.shape[1])
 
-    #split the data into train and test
     X_train, X_test, y_train, y_test = train_test_split(reduce_X, y, test_size = test_size, random_state=random_state)
 
     #fit the model
